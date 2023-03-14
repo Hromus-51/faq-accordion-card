@@ -26,8 +26,7 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Live Site](https://hromus-51.github.io/faq-accordion-card/)
 
 ### Built with
 
@@ -40,4 +39,3 @@ Your users should be able to:
 ## Author
 
 - Telegram - [Ilgiz Farrakhov](https://t.me/Gizmo51)
-# faq-accordion-card
