@@ -1,0 +1,150 @@
+.faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .container {
+        flex: 1;
+        max-width: 1200px;
+        padding: 0px 24px;
+
+        .faqBody {
+            max-width: 920px;
+            margin: 0 auto;
+            position: relative;
+
+            transform: translateY(40px);
+            opacity: 0;
+
+            &_visible {
+                transform: translateY(0);
+                opacity: 1;
+
+                transition: transform 0.7s ease 0s, opacity 0.6s ease 0.1s;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 206px;
+                left: -91px;
+                height: 180px;
+                width: 188px;
+
+                background: url('../../assets/image/illustration-box-desktop.svg') 0 0 / 100% 100% no-repeat;
+
+                animation: box 1.5s ease-in-out infinite alternate running 0s none;
+
+                @keyframes box {
+
+                    0% {
+                        transform: translateY(-10px);
+                    }
+
+                    100% {
+                        transform: translateY(0px);
+                    }
+
+                }
+
+                @media (max-width:425px) {
+                    display: none;
+                }
+            }
+
+            &::before {
+                @media (max-width:425px) {
+                    content: '';
+                    position: absolute;
+                    z-index: 2;
+                    top: -108px;
+                    left: 50%;
+                    height: 212px;
+                    width: 240px;
+
+                    transform: translateX(-50%);
+
+                    background: url('../../assets/image/illustration-woman-online-mobile.svg') 0 0 / 100% 100% no-repeat;
+                }
+            }
+
+            .faqContent {
+                padding: 65px 95px 83px;
+
+                display: flex;
+                column-gap: 15px;
+
+                overflow: hidden;
+                position: relative;
+
+                border-radius: 23px;
+                background: #FFFFFF;
+                box-shadow: 0px 50px 50px -20px #35127A7F;
+
+                @media (max-width:425px) {
+                    display: block;
+
+                    padding: 132px 24px 48px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -294px;
+                    left: -576px;
+                    height: 944px;
+                    width: 964px;
+
+                    background: url('../../assets/image/bg-pattern-desktop.svg') 0 0 / 100% 100% no-repeat;
+
+                    @media (max-width:425px) {
+                        display: none;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 70px;
+                    left: -84px;
+                    height: 359px;
+                    width: 472px;
+
+                    background: url('../../assets/image/illustration-woman-online-desktop.svg') 0 0 / 100% 100% no-repeat;
+
+                    @media (max-width:425px) {
+                        display: none;
+                    }
+                }
+
+                .imageSide {
+                    flex: 0.5 1 380px;
+                }
+
+                .faqSide {
+                    flex: 0.48 1 350px;
+
+                    .faqTitle {
+                        font-size: 32px;
+                        font-weight: 700;
+                        line-height: 40px;
+
+                        &:not(:last-child) {
+                            margin-bottom: 17px;
+                        }
+
+                        @media (max-width:425px) {
+                            text-align: center;
+                        }
+                    }
+
+                    .faqContainer {
+                        min-height: 307px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}
